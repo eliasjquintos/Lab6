@@ -14,7 +14,11 @@ def encode():
     return res
 
 def decode(password):
-    return "".join([str(int(dig)-3) for dig in password])
+    res = ''
+    for i in password:
+        temp = int(i) + 10
+        res = res + str(int(temp) - 3)[-1]
+    return res
 
 
 if __name__ == '__main__':
