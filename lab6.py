@@ -1,4 +1,5 @@
 #Elias (EJ) Quintos
+#Collaborator: Julian Carvajal
 
 def encode():
     res = ''
@@ -11,6 +12,9 @@ def encode():
         temp = int(i) + 3
         res = res + str(temp)[-1]
     return res
+
+def decode(password):
+    return "".join([str(int(dig)-3) for dig in password])
 
 
 if __name__ == '__main__':
